@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Funktional == leicht evolvierbar?</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="./resources/TODO.ico">
+
+	<!-- base css - gets mostly overwritten -->
+	<link rel="stylesheet" href="css/reveal.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/tomorrow-night-bright.css">
+
+	<!-- Icons from "Font Awesome" -->
+	<link rel="stylesheet" href="lib/font/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<!-- Custom styling -->
+	<link rel="stylesheet" href="css/custom-martin.css">
+
+	<!-- 
+			If you're tweaking the custom.css you might also want to tweak the pdf output. The default pdf is located here: css/print/pdf.css. Add a file css/custom-pdf.css... 
+		-->
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/custom-pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-external="./titelblatt.html"> </section>
+			<section data-external="./sponsoren.html"> </section>
+
+			<section data-external="./agility-kata.html"> </section>
+			<section data-external="./pair-programming.html"> </section>
+			<section data-external="./rules.html"> </section>
+
+			<section data-external="./target-application.html"> </section>
+			<section data-external="./increment1.html"> </section>
+			<section data-external="./increment2.html"> </section>
+			<section data-external="./increment3.html"> </section>
+			<section data-external="./increment4.html"> </section>
+			<section data-external="./increment5.html"> </section>
+			<section data-external="./increment6.html"> </section>
+			<section data-external="./increment7.html"> </section>
+
+			<section data-external="./abschluss.html"></section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			history: true,
+			slideNumber: 'c',
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			//
+			// NOTE: A list of plugins: https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware
+			//
+			// NOTE: I added the following plugins:
+			//
+			// 	- tagcloud: https://github.com/sebhildebrandt/reveal.js-tagcloud-plugin
+			//	- badges: https://github.com/ThomasWeinert/reveal-badges
+			//
+			// Just comment them if you don't need them...
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{
+					src: 'node_modules/reveal_external/external/external.js',
+					condition: function () {
+						return !!document.querySelector('[data-external],[data-external-replace]');
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>

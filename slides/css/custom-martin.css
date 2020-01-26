@@ -1,0 +1,407 @@
+/* reveal.js theme */
+/**
+ * my own theme for reveal.js.
+ * Author: Martin Grotz
+ */
+ @import url(../../lib/font/league-gothic/league-gothic.css);
+ @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+ @import url(../../lib/font/Caveat/Caveat.css);
+
+ /**
+  * Solarized colors by Ethan Schoonover
+  */
+ html * {
+   color-profile: sRGB;
+   rendering-intent: auto; }
+ 
+ /*********************************************
+  * GLOBAL STYLES
+  *********************************************/
+ body {
+   background: white;
+   background-color: white; }
+ 
+ .reveal {
+    font-family: "Source Sans Pro", "Trebuchet MS", "Lucida Grande",
+    "Bitstream Vera Sans", "Helvetica Neue", sans-serif;
+
+   font-size: 30px;
+   font-weight: normal;
+   color: #293c4b; }
+ 
+ ::selection {
+   color: #fff;
+   background: #d33682;
+   text-shadow: none; }
+ 
+ ::-moz-selection {
+   color: #fff;
+   background: #d33682;
+   text-shadow: none; }
+ 
+ .reveal .slides > section,
+ .reveal .slides > section > section {
+   line-height: 1.3;
+   font-weight: inherit; }
+ 
+ /*********************************************
+  * HEADERS
+  *********************************************/
+ .reveal h1,
+ .reveal h2,
+ .reveal h3,
+ .reveal h4,
+ .reveal h5,
+ .reveal h6 {
+   margin: 0 0 20px 0;
+   font-weight: normal;
+   line-height: 1.2;
+   letter-spacing: normal;
+   text-shadow: none;
+   word-wrap: break-word; }
+ 
+ .reveal h1 {
+   font-size: 3.5rem; 
+   text-transform: uppercase;
+  }
+ 
+ .reveal h2 {
+   font-size: 2.5rem; }
+ 
+ .reveal h3 {
+   font-size: 1.5rem; }
+ 
+ .reveal h4 {
+   font-size: 1rem; }
+ 
+ .reveal h1 {
+   text-shadow: none; }
+ 
+ /*********************************************
+  * OTHER
+  *********************************************/
+ .reveal p {
+   margin: 20px 0;
+   line-height: 1.3; }
+ 
+ /* Ensure certain elements are never larger than the slide itself */
+ .reveal img,
+ .reveal video,
+ .reveal iframe {
+   max-width: 95%;
+   max-height: 95%; }
+ 
+ .reveal strong,
+ .reveal b {
+   font-weight: bold; }
+ 
+ .reveal em {
+   font-style: italic; }
+ 
+ .reveal ol,
+ .reveal dl,
+ .reveal ul {
+   display: inline-block;
+   text-align: left;
+   margin: 0 0 0 1em; }
+ 
+ .reveal ol {
+   list-style-type: decimal; }
+ 
+ .reveal ul {
+   list-style-type: disc; }
+ 
+ .reveal ul ul {
+   list-style-type: square; }
+ 
+ .reveal ul ul ul {
+   list-style-type: circle; }
+ 
+ .reveal ul ul,
+ .reveal ul ol,
+ .reveal ol ol,
+ .reveal ol ul {
+   display: block;
+   margin-left: 40px; }
+ 
+ .reveal dt {
+   font-weight: bold; }
+ 
+ .reveal dd {
+   margin-left: 40px; }
+ 
+ .reveal blockquote {
+   display: block;
+   position: relative;
+   width: 70%;
+   margin: 20px auto;
+   padding: 5px;
+   font-style: normal;
+  font-family: "Caveat", serif;
+  font-size: 2rem;
+   background: rgba(255, 255, 255, 0.05);
+   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+ 
+ .reveal blockquote p:first-child,
+ .reveal blockquote p:last-child {
+   display: inline-block; }
+ 
+ .reveal q {
+   font-style: italic; }
+ 
+ .reveal pre {
+   display: block;
+   position: relative;
+   width: 90%;
+   margin: 20px auto;
+   text-align: left;
+   font-size: 0.55em;
+   font-family: monospace;
+   line-height: 1.2em;
+   word-wrap: break-word;
+   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+ 
+ .reveal code {
+   text-transform: none; }
+ 
+ .reveal pre code {
+   display: block;
+   padding: 5px;
+   overflow: auto;
+   max-height: 400px;
+   word-wrap: normal; }
+ 
+ .reveal table {
+   margin: auto;
+   border-collapse: collapse;
+   border-spacing: 0; }
+ 
+ .reveal table th {
+   font-weight: bold; }
+ 
+ .reveal table th,
+ .reveal table td {
+   text-align: left;
+   padding: 0.2em 0.5em 0.2em 0.5em;
+   border-bottom: 1px solid; }
+ 
+ .reveal table th[align="center"],
+ .reveal table td[align="center"] {
+   text-align: center; }
+ 
+ .reveal table th[align="right"],
+ .reveal table td[align="right"] {
+   text-align: right; }
+ 
+ .reveal table tbody tr:last-child th,
+ .reveal table tbody tr:last-child td {
+   border-bottom: none; }
+ 
+ .reveal sup {
+   vertical-align: super; }
+ 
+ .reveal sub {
+   vertical-align: sub; }
+ 
+ .reveal small {
+   display: inline-block;
+   font-size: 0.6em;
+   line-height: 1.2em;
+   vertical-align: top; }
+ 
+ .reveal small * {
+   vertical-align: top; }
+ 
+ /*********************************************
+  * LINKS
+  *********************************************/
+ .reveal a {
+   color: #268bd2;
+   text-decoration: none;
+   -webkit-transition: color .15s ease;
+   -moz-transition: color .15s ease;
+   transition: color .15s ease; }
+ 
+ .reveal a:hover {
+   color: #78b9e6;
+   text-shadow: none;
+   border: none; }
+ 
+ .reveal .roll span:after {
+   color: #fff;
+   background: #1a6091; }
+ 
+ /*********************************************
+  * IMAGES
+  *********************************************/
+ .reveal section img {
+   margin: 10px 0px;
+  }
+ 
+ .reveal section img.plain {
+   border: 0;
+   box-shadow: none; }
+ 
+ .reveal a img {
+   -webkit-transition: all .15s linear;
+   -moz-transition: all .15s linear;
+   transition: all .15s linear; }
+ 
+ .reveal a:hover img {
+  }
+ 
+ /*********************************************
+  * NAVIGATION CONTROLS
+  *********************************************/
+ .reveal .controls {
+   color: #268bd2; 
+   
+  }
+ 
+ /*********************************************
+  * PROGRESS BAR
+  *********************************************/
+ .reveal .progress {
+   background: rgba(0, 0, 0, 0.2);
+   color: #268bd2; }
+ 
+ .reveal .progress span {
+   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+ 
+
+
+/* Code ------------------------------------------------ */
+
+/* Custom font for code samples: Fira Code ;-) */
+
+/* Tweak size of text in pre (code) blocks */
+.reveal pre {
+    font-size: 0.49em; /* default value: 0.55em */
+    line-height: 1.2em;  /* default value: 1.2em */
+	display: inline-grid;
+}
+
+/* Increase area for code samples */
+.reveal pre code {
+    max-height: 700px;
+}
+
+/* Reveal.Js fragments in code: All personal styles must be "registered" here */
+.reveal .slides section .fragment.mycodemark,
+.reveal .slides section .fragment.my-semi-hide {
+  opacity: 1;
+  visibility: inherit; 
+}
+
+/* Reveal.Js fragments in code: personal styles are customized here */
+.mycodemark.visible {
+    font-weight: bold;
+}
+
+.my-semi-hide.visible {
+    font-weight: 100;
+}
+
+.reveal .slides section .mycodemark-always {
+    font-weight: bold;
+}
+.reveal .slides section .mycodemark-highlight .hljs-comment {
+    font-weight: bold;
+    color: black;
+}
+
+.reveal .slides section .my-semi-hide-always {
+    font-weight: 100;
+}
+
+/* Other customizations ------------------------------ */
+
+/* Small font for links, notes */
+.reveal .slides .small,
+.reveal .slides .small a {
+    font-size: medium;
+}
+
+.reveal .slides .too-much-content {
+    font-size: 80%;
+}
+
+/* Only for debugging */
+/*.slides section.present p .small {
+    font-size: 20px;
+    line-height: 22px;
+}*/
+
+/* Image customizations ------------------------------ */
+
+/* Resize images according to alt text */
+img[alt^=fun-] { width: 800px; }
+img[alt^=funx-] { height: 550px; }
+img[alt^=fullscreen-] {width: 100%; }
+
+/* Remove border for some images --------------------- */
+.reveal section img[alt^=noborder-] {
+    border: none;
+    box-shadow: none;
+    width: 644px;
+}
+
+
+/* Slides with background image can be tweaked with the `data-state` class
+    Here: the `dimmed` class
+*/
+.dimmed .slide-background {
+    opacity: 0.25 !important;
+}
+.dimmed-less .slide-background {
+    opacity: 0.4 !important;
+}
+.dimmed-almost-visible .slide-background {
+    opacity: 0.8 !important;
+}
+.dimmed h2, .dimmed p {
+    color: black
+}
+.dimmed p { background-color: white; }
+
+.dimmed-almost-visible h2,
+.dimmed-almost-visible h3,
+.dimmed-almost-visible * {
+    color: black
+}
+
+
+span.clouditem {
+    padding-left: 0.15em;
+    padding-right: 0.05em;
+    line-height: 90%;
+    letter-spacing: -0.015em;
+}
+
+.reveal .column-with-border {
+  border: 1px solid black;
+  max-width: 30%;
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.reveal .column-with-border h3 {
+  font-size: 2rem;
+  justify-self: center;
+  margin-top: 0.5rem;
+}
+
+.reveal .column-with-border ul {
+  font-size: 1rem;
+  margin-left: 1.75rem;
+  margin-right: 0.25rem;
+}
+
+.reveal .column-with-border ul > li{
+  margin: 0.5rem 0;
+}

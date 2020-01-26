@@ -1,0 +1,26 @@
+<div style="display: flex; flex-direction: column; padding-bottom: 2rem; align-items: center;">
+    <h1 style="font-size: 3rem;">Increment 3 - Menus and exports</h1>
+
+    <ol class="fragment" style="font-size: 1.25rem;">
+        <li>Menus can be created:
+            <ol>
+                <li>Menus have a title: Required, text, 120 characters max</li>
+                <li>A menu belongs to exactly one user</li>
+                <li>Menus reference at least one recipe of the same user they belong to</li>
+                <li>The order in which recipes are referenced in the menu is important</li>
+                <li>If a recipe gets deleted, it is automatically removed from all menus</li>
+                <li>If a menu contains no more recipes it gets deleted</li>
+            </ol>
+        </li>
+
+        <li>Recipes and menus can be exported:
+            <ol>
+                <li>An exported recipe includes its title, method and ingredients, and to how many menus it belongs</li>
+                <li>If the recipe has an image URL output the URL as text, too</li>
+                <li>An exported menu includes its title and the exports of all recipes it references, in order</li>
+            </ol>
+        </li>
+        <li>The export format is not important - plain text is fine</li>
+    </ol>
+
+</div>

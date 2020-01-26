@@ -1,0 +1,32 @@
+<div style="display: flex; flex-direction: column; padding-bottom: 2rem; align-items: center;">
+    <h1 style="font-size: 3rem;">Increment 4 - Shopping list</h1>
+
+    <ol class="fragment" style="font-size: 1.25rem;">
+        <li>The ingredients format is changed:
+            <ol>
+                <li>The amount is now a floating point number</li>
+                <li>The unit of measure is now a text with 60 characters max, and:
+                    <ol>
+                        <li>There is a way to export a list of all already used units of measure in the system (used in
+                            any recipe)</li>
+                    </ol>
+                </li>
+                <li>The ingredient name is still a required text with 60 characters max</li>
+            </ol>
+        </li>
+
+        <li>A shopping list can be exported:
+            <ol>
+                <li>A shopping list references menus and/or recipes</li>
+                <li>A shopping list must reference at least one menu or recipe</li>
+                <li>Ingredient amounts are rounded to two decimals - trailing zeroes are removed (so "2.0 pc eggs"
+                    becomes "2 pc eggs", but "0.33 l milk" stays as "0.33 l milk"</li>
+                <li>A shopping list adds ingredients with the same name and unit of measure automatically, so "2.0 pc
+                    eggs" and "3.0 pc eggs" get exported as "5 pc eggs"</li>
+                <li>The export contains the added amounts, units of measures and names of all ingredients</li>
+            </ol>
+        </li>
+        <li>The export format is not important - plain text is fine</li>
+    </ol>
+
+</div>
