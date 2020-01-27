@@ -1,30 +1,31 @@
 <div style="display: flex; flex-direction: column; padding-bottom: 2rem; align-items: center;">
     <h1 style="font-size: 3rem;">Increment 1 - Users and recipes</h1>
 
-    <ol class="fragment" style="font-size: 1.25rem;">
+    <ol style="font-size: 1.25rem;">
         <li>A recipe consists of:
             <ol>
-                <li>A title: Required, Text, with a maximum length of 120 characters</li>
-                <li>A cooking method: Required, Text, with a maximum length of 2000 characters</li>
+                <li style="font-weight: bold;">A title: Required, Text, with a maximum length of 120 characters</li>
+                <li>A cooking method: Required, Text</li>
                 <li>Ingredients: Required, A collection of ingredients, each consisting of:
                     <ol>
-                        <li>An amount: Required, Text, includes the unit of measure as text, 60 characters max</li>
-                        <li>An ingredient name: Required, Text, 60 characters max</li>
+                        <li>An amount: Required, Text, includes the unit of measure as text</li>
+                        <li>An ingredient name: Required, Text</li>
                     </ol>
                 </li>
-                <li>An image URL: Optional, Text, 255 chars max</li>
+                <li>An image URL: Optional, Text</li>
             </ol>
         </li>
         <li>A user consist of:
             <ol>
-                <li>A real name: Required, Text, 60 characters max</li>
-                <li>A username: Required, only letters a-z, A-Z, 0-9, 16 characters max</li>
+                <li>A real name: Required, Text</li>
+                <li style="font-weight: bold;">A username: Required, only letters a-z, A-Z, 0-9, 16 characters max</li>
             </ol>
         </li>
-        <li>
+        <li style="font-weight: bold;">
             Usernames must be unique - trying to create a user with an already existing name results in an error
         </li>
-        <li>Recipes belong to exactly one user - trying to attach a new recipe to an invalid user results in an error
+        <li style="font-weight: bold;">Recipes belong to exactly one user - trying to attach a new recipe to a
+            non-existing user results in an error
         </li>
         <li>Recipes and users can only be created - neither deleted nor edited</li>
         <li>Recipes and users are stored in-memory only</li>
